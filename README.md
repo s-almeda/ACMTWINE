@@ -3,7 +3,7 @@ Shm's ACM Twine Workshop!
 ### Thanks for playing!!
 
 Unless you cheated by just finding this on my github. In which case, power to you.
-I hope this encourages you to try using Twine, or made you more interested in the POWER OF HTML/CSS/JAVASCRIPT!
+I hope this encourages you to try using Twine, or made you more interested in the POWER OF CREATIVE PROGRAMMING INTERFACES, OPEN SOURCE, HTML, CSS, AND JAVASCRIPT!
 
 
 ## To Edit In Twine 
