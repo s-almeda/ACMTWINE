@@ -4,7 +4,7 @@
 $filename = "mydata.txt";
 $content = file($filename);
 
-$data = $_POST['field1'] . '-' . $_POST['field2'] . "\r\n";
+$data = $_POST['field1'] . "\n" . "\r\n";
 
 //insert votes to txt file
 $insertvote = $yes."||".$no;
@@ -15,7 +15,7 @@ fclose($fp);
 
 
 
-<h2>Result:</h2>
+<h2>Cool! Here's everyone's favorite memes so far:</h2>
 
 <?php
 echo file_get_contents( "mydata.txt" ); // get the contents, and echo it out.
