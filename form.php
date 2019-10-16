@@ -38,9 +38,6 @@ height='20'>
 <tr>
 <td>No:</td>
 <td>
-<img src="poll.gif"
-width='<?php echo(100*round($no/($no+$yes),2)); ?>'
-height='20'>
 <?php echo(100*round($no/($no+$yes),2)); ?>%
 </td>
 </tr>
