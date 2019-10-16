@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
-<body>
 
-<h1>The XMLHttpRequest Object</h1>
-
-<button type="button" onclick="loadDoc()">Request data</button>
-
-<p id="demo"></p>
-
+<head>
 
 <script>
-  var body = document.getElementsByTagName("body")[0];
-body.addEventListener("load", loadDoc, false);
+
 function loadDoc() {
+  console.log("BUTTON PUNCHED!")
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("GET","form.php?vote=1",true);
   xmlhttp.send();
 }
 </script>
+</head>
+
+<body>
+
+<div id="poll">
+<h3>Do you like PHP and AJAX so far?</h3>
+<form>
+Yes:
+<input type="radio" name="vote" value="0" onclick="loadDoc(this.value)">
+<br>No:
+<input type="radio" name="vote" value="1" onclick="loadDoc(this.value)">
+</form>
+</div>
 
 </body>
+
 </html>
