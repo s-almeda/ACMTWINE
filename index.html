@@ -405,13 +405,14 @@ She rips the $itemA out of your hands, which is incredibly uncharacteristic of h
 [[Go back downstairs-&gt;Hallway]]
 [[Visit a different professor-&gt;professors]]</tw-passagedata><tw-passagedata pid="21" name="STEMCafe" tags="" position="1611,314" size="100,100">It&#39;s the STEM Cafe!
 (if: $raisinets is 1)[Want to purchase some $itemA for $years.50 Points?
-[[Yes!-&gt;purchase]] | [[Nah, I gotta save my points!-&gt;nope]]]\
+[[Yes!-&gt;purchase]]
+[[Nah, I gotta save my points!-&gt;nope]]]\
 (elseif: $raisinets is &gt;= 5)[You&#39;ve already spent ALL OF YOUR POINTS buying $itemB.]\
 (else:)[This place is filled with friendly STEM majors cramming for midterms. A friendly cashier greets you! You&#39;re not very hungry, though, because you already ate some *delicious cheese discs* at the ACM/DIGIT.all meeting!]
 
 [[Go back to the Hallway-&gt;Hallway]]
 [[Head towards the Science Complex-&gt;biology]]</tw-passagedata><tw-passagedata pid="22" name="purchase" tags="" position="1742,502" size="100,100">Sweet, it&#39;s Meal Equiv time, too!!
-*You have obtained $itemB!!*
+*You have obtained $itemA!!*
 (set: $raisinets to 5)
 [[Go back to the Hallway-&gt;Hallway]]</tw-passagedata><tw-passagedata pid="23" name="nope" tags="" position="1619,506" size="100,100">You quickly leave the STEM cafe to escape the sweet temptation of $itemB. 
 
