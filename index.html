@@ -164,9 +164,9 @@ $map
     (set: $positionX to 2)
     (set: $positionY to 2)
 }</tw-passagedata><tw-passagedata pid="4" name="Our First Twiney Friend" tags="" position="567,13" size="100,100">
-(if: $Saves contains &quot;Slot A&quot;)[
+(if: $Saves is not 0)[(if: $Saves contains &quot;Slot A&quot;)[
   (link: &quot;Start where I left off&quot;)[(load-game:&quot;Slot A&quot;)]
-]
+]]\
 
 ###Hello STEM102!!
 Don&#39;t you think this twine intro could look a little [[cuter?]]
