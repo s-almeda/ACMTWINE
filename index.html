@@ -380,12 +380,14 @@ But you just can&#39;t wave back because you don&#39;t have your
 [[Dr. Li-&gt;Li]]</tw-passagedata><tw-passagedata pid="17" name="Bloodgood" tags="" position="1014,662" size="100,100">(if: $stake is 5)[&quot;Ah, you found my $itemB!&quot; says Dr. Bloogood.
 He rips the $itemB out of your hands, which is somewhat uncharacteristic of him. 
 &quot;By the way&quot; he says, &quot;I think Dr. Papamichail was looking for you in the STUD.&quot; 
-The STUD! Why didn&#39;t you think to check there?! (set:$stake to 6)
-[[Go visit Dr. Papamichail]]]\
+The STUD! Why didn&#39;t you think to check there?! 
+&quot;Yeah, didn&#39;t you hear?&quot; says Dr. Bloodgood, as he lovingly admires his $itemB. &quot;They even installed that new teleportation chamber that lets you warp from the STEM Building hallway to the Student Center ping pong tables, instantly!&quot;
+And yet they can&#39;t speed up the Forcina Elevator? (set:$stake to 6)
+*You can now visit the STUD!*]\
 (else:)[Dr. Bloodgood seems troubled. &quot;I&#39;m sorry, I can&#39;t talk right now! I&#39;m missing my $itemB. I just can&#39;t seem to remember where I put it... (set: $stake to 1)
 [[Go back downstairs-&gt;Hallway]]
 [[Visit a different professor-&gt;professors]]]\
-</tw-passagedata><tw-passagedata pid="18" name="Salgian" tags="" position="1164,662" size="100,100">(if: $raisinets is 5)[&quot;Ah, you brought me a snack!&quot; says Dr. Salgian.
+</tw-passagedata><tw-passagedata pid="18" name="Salgian" tags="" position="1153,737" size="100,100">(if: $raisinets is 5)[&quot;Ah, you brought me a snack!&quot; says Dr. Salgian.
 She rips the $itemA out of your hands, which is incredibly uncharacteristic of her. 
 &quot;By the way&quot; she says, between bites of $itemA, &quot;Can you give this back to Dr. Bloodgood?&quot; 
 *She hands you a(n) $itemB !!* (set:$stake to 5)(set:$raisinets to 6)]\
@@ -415,7 +417,9 @@ She rips the $itemA out of your hands, which is incredibly uncharacteristic of h
 
 [[Back to the Hallway-&gt;Hallway]] </tw-passagedata><tw-passagedata pid="24" name="biology" tags="" position="1473,186" size="100,100">You see a chemical equation on a whiteboard and run screaming back to the safety of the STEM Building.
 
-[[Anything but sig figs!!-&gt;Hallway]]</tw-passagedata><tw-passagedata pid="25" name="Go visit Dr. Papamichail" tags="" position="853,699" size="100,100">You find Dr. Papamichail at the ping pong tables in the STUD. </tw-passagedata></tw-storydata>
+
+[[Anything but sig figs!!-&gt;Hallway]]</tw-passagedata><tw-passagedata pid="25" name="Go visit Dr. Papamichail" tags="" position="853,699" size="100,100">You find Dr. Papamichail at the ping pong tables in the STUD. 
+He is playing ping pong</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
