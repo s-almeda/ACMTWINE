@@ -386,7 +386,7 @@ But you just can&#39;t wave back because you don&#39;t have your
 [[Dr. Bloodgood-&gt;Bloodgood]]
 [[Dr. Salgian-&gt;Salgian]]
 [[Dr. Papamichail-&gt;Papa]]
-[[Dr. Li-&gt;Li]]</tw-passagedata><tw-passagedata pid="17" name="Bloodgood" tags="" position="1014,662" size="100,100">(if: $stake is 6)[Dr. Bloodgood lovingly admires his $itemB. You decide to leave him alone.&quot;]
+[[Dr. Li-&gt;Li]]</tw-passagedata><tw-passagedata pid="17" name="Bloodgood" tags="" position="1014,662" size="100,100">(if: $stake is 6)[Dr. Bloodgood lovingly admires his $itemB. You decide to leave him alone.]
 (elseif: $stake is 5)[&quot;Ah, you found my $itemB!&quot; says Dr. Bloogood.
 He rips the $itemB out of your hands, which is somewhat uncharacteristic of him. 
 
@@ -448,7 +448,7 @@ He is playing ping pong... using your &lt;font color=&quot;springgreen&quot;&gt;
 
 
 &quot;– but this textbook is my favorite color, $color, and the table tennis paddle I brought today is a measly dark $color-ish color!&quot;
-[[&quot;But I need my very textbook, inconceivably heavy textbook for the midterm!!&quot;-&gt;finalChallenge]]</tw-passagedata><tw-passagedata pid="29" name="finalChallenge" tags="" position="2006,331" size="100,100">&quot;Tell you what, I&#39;ll give you your textbook back if you give me the correct output of this C++ code snippet!&quot;
+[[&quot;But I need my inconceivably heavy textbook for the midterm!!&quot;-&gt;finalChallenge]]</tw-passagedata><tw-passagedata pid="29" name="finalChallenge" tags="" position="2006,331" size="100,100">&quot;Tell you what, I&#39;ll give you your textbook back if you give me the correct output of this C++ code snippet!&quot;
 
 int main() 
 &#39;&#39;{&#39;&#39;
@@ -474,8 +474,8 @@ You&#39;ve Unlocked: (set: $github to &quot;unlocked&quot;)
 (else:)[&quot;The answer is $answer!&quot; you say!
 &quot;Oof... Big yikes, you got it wrong, awkward,&quot; Dr. Papamichail says, as he totally would in real life. 
 [[Try again?-&gt;finalChallenge]]
-]</tw-passagedata><tw-passagedata pid="31" name="[&quot;Jump back to the Examples!&quot;" tags="" position="476,147" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="32" name="Header" tags="header" position="256,345" size="100,100">(if: $github is &quot;unlocked&quot;)[&quot;Congrats on beating the game!&quot;
-(link: &quot;A Link to the GitHub for this project!&quot;)[(goto-url: &#39;https://github.com/s-almeda/ACMTWINE&#39;)]]
+]</tw-passagedata><tw-passagedata pid="31" name="[&quot;Jump back to the Examples!&quot;" tags="" position="476,147" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="32" name="Header" tags="header" position="256,345" size="100,100">(if: $github is &quot;unlocked&quot;)[(text-style: &quot;outline&quot;)[&quot;Congrats on beating the game!]&quot;
+(link: &quot;(text-style: &quot;outline&quot;)[A Link to the GitHub for this project!]&quot;)[(goto-url: &#39;https://github.com/s-almeda/ACMTWINE&#39;)]]
 </tw-passagedata><tw-passagedata pid="33" name="Footer" tags="footer" position="416,535" size="100,100">&lt;br&gt;
 &lt;br&gt;
 &lt;p style=&quot;font-size:12px; font-family: &quot;Times New Roman&quot;, Times, serif;line-height: 16pt; font-color: white; text-shadow: 0px;&quot;&gt;[[Wanna get started with your own twine adventure?]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="34" name="Wanna get started with your own twine adventure?" tags="" position="416,685" size="100,100">(link: &quot;twinery.org, a good place to get started&quot;)[(goto-url: &#39;https://twinery.org/&#39;)]
