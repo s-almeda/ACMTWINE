@@ -13,14 +13,9 @@
   var body = document.getElementsByTagName("body")[0];
 body.addEventListener("load", loadDoc, false);
 function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "demo_get.asp", true);
-  xhttp.send();
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET","form.php?vote=1",true);
+  xmlhttp.send();
 }
 </script>
 
