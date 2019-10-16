@@ -383,14 +383,15 @@ He rips the $itemB out of your hands, which is somewhat uncharacteristic of him.
 The STUD! Why didn&#39;t you think to check there?! 
 &quot;Yeah, didn&#39;t you hear?&quot; says Dr. Bloodgood, as he lovingly admires his $itemB. &quot;They even installed that new teleportation chamber that lets you warp from the STEM Building hallway to the Student Center ping pong tables, instantly!&quot;
 And yet they can&#39;t speed up the Forcina Elevator? (set:$stake to 6)
-*You can now visit the STUD!*(set:$STUD to 5)]\
+&lt;font color=&quot;lightpink&quot;&gt;*You can now visit the STUD!*&lt;/font&gt;(set:$STUD to 5)]\
 (else:)[Dr. Bloodgood seems troubled. &quot;I&#39;m sorry, I can&#39;t talk right now! I&#39;m missing my $itemB. I just can&#39;t seem to remember where I put it... (set: $stake to 1)
 [[Go back downstairs-&gt;Hallway]]
 [[Visit a different professor-&gt;professors]]]\
 </tw-passagedata><tw-passagedata pid="18" name="Salgian" tags="" position="1153,737" size="100,100">(if: $raisinets is 5)[&quot;Ah, you brought me a snack!&quot; says Dr. Salgian.
 She rips the $itemA out of your hands, which is incredibly uncharacteristic of her. 
 &quot;By the way&quot; she says, between bites of $itemA, &quot;Can you give this back to Dr. Bloodgood?&quot; 
-*She hands you a(n) $itemB !!* (set:$stake to 5)(set:$raisinets to 6)]\
+&lt;font color=&quot;lightpink&quot;&gt;**She hands you a(n) $itemB !!**&lt;/font&gt;
+(set:$stake to 5)(set:$raisinets to 6)]\
 (elseif: $raisinets is 6)[Dr. Salgian greets you warmly! &quot;Thanks so much for bringing me $itemA! I might even give you extra credit!&quot;]\
 (else:)[Dr. Salgian does not seem to notice you. &quot;Ah... I am so hungry, I cannot continue my office hours until I get some $itemA!&quot; (set: $raisinets to 1)]
 (if:$stake is 1)[You notice what looks like a(n) $itemB behind her desk.]\
@@ -412,7 +413,7 @@ She rips the $itemA out of your hands, which is incredibly uncharacteristic of h
 
 [[Go back to the Hallway-&gt;Hallway]]
 [[Head towards the Science Complex-&gt;biology]]</tw-passagedata><tw-passagedata pid="22" name="purchase" tags="" position="1742,502" size="100,100">Sweet, it&#39;s Meal Equiv time, too!!
-*You have obtained $itemA!!*
+&lt;font color=&quot;lightpink&quot;&gt;*You have obtained $itemA!!*&lt;/font&gt;
 (set: $raisinets to 5)
 [[Go back to the Hallway-&gt;Hallway]]</tw-passagedata><tw-passagedata pid="23" name="nope" tags="" position="1619,506" size="100,100">You quickly leave the STEM cafe to escape the sweet temptation of $itemB. 
 
