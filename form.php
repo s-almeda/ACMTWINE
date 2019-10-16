@@ -8,7 +8,7 @@ $data = $_POST['field1'] . '-' . $_POST['field2'] . "\r\n";
 
 //insert votes to txt file
 $insertvote = $yes."||".$no;
-$fp = fopen($filename,"w");
+$fp = fopen($filename,"a+");
 fputs($fp,$data);
 fclose($fp);
 ?>
