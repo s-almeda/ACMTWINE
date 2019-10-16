@@ -163,11 +163,9 @@ $map
   )
     (set: $positionX to 2)
     (set: $positionY to 2)
-}</tw-passagedata><tw-passagedata pid="4" name="Our First Twiney Friend" tags="" position="567,13" size="100,100">
-(if: $Saves is not 0)[(if: $Saves contains &quot;Slot A&quot;)[
-  (link: &quot;Start where I left off&quot;)[(load-game:&quot;Slot A&quot;)]
-]]\
-
+}</tw-passagedata><tw-passagedata pid="4" name="Our First Twiney Friend" tags="" position="567,13" size="100,100">(if: $github is &quot;unlocked&quot;)[&quot;Congrats on beating the game!&quot;
+(link: &quot;A Link to the GitHub for this project!&quot;)[(goto-url: &#39;https://github.com/s-almeda/ACMTWINE&#39;)]]\
+(if: $php is &quot;unlocked&quot;)[[[&quot;Jump back to the Examples!&quot;]]]
 ###Hello STEM102!!
 Don&#39;t you think this twine intro could look a little [[cuter?]]
 
@@ -213,7 +211,9 @@ tw-story {
     color: #fff;
 	text-shadow: 0px 0px white; /* text shadow */
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="5" name="You can even use PHP!" tags="" position="490,316" size="100,100">###Enter your favorite meme
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="5" name="You can even use PHP!" tags="" position="490,316" size="100,100">(set: $php to &quot;unlocked&quot;)\
+
+Enter your favorite meme:
 
 &lt;form action=&quot;form.php&quot; method=&quot;POST&quot;&gt;
     &lt;input name=&#39;field1&#39; type=&quot;text&quot; /&gt;
@@ -347,7 +347,7 @@ What else can you do?
 [[Even Play a Dungeon Crawling Game!-&gt;Start]]</tw-passagedata><tw-passagedata pid="12" name="STEM102" tags="" position="1279,139" size="100,100">You are in STEM 102. Shm is trying to give a presentation on Twine, but you don&#39;t care... because you still don&#39;t have your 
 &lt;font color=&quot;springgreen&quot;&gt;CSC $courseN : Intoduction to $itemC1 : A Top-Down Linear Algebraic Approach (10th edition)&lt;/font&gt; Textbook !
 
-[[You can leave to go to the STEM Building Hallway-&gt;Hallway]]</tw-passagedata><tw-passagedata pid="13" name="Hallway" tags="" position="1279,289" size="100,100">You are in the STEM Building Hallway. 
+[[You can leave to go to the STEM Building Hallway-&gt;Hallway]]</tw-passagedata><tw-passagedata pid="13" name="Hallway" tags="" position="1269,248" size="100,100">You are in the STEM Building Hallway. 
 (if: $raisinets is 5)[You have some $itemA you purchased at the STEM Cafe.
 ]\
 (if:$stake is 5)[You have Dr. Bloodgood&#39;s $itemB.
@@ -356,11 +356,11 @@ What else can you do?
 ]\
 (if:$stake is 1)[I wonder where Dr. Bloodgood&#39;s $itemB is?
 ]\
-
+(if:$STUD is 5)[[[Teleport to the STUD!-&gt;WARP]]]
 [[Go to STEM 102-&gt;STEM102]]
 [[Go to STEM 101-&gt;STEM101]]
 [[Visit the STEM Cafe-&gt;STEMCafe]]
-[[Go Upstairs-&gt;STEM2ndFLoor]]</tw-passagedata><tw-passagedata pid="14" name="STEM101" tags="" position="1128,308" size="100,100">(if: $numTimesVisitedTom is 0)[(set: $pun to (prompt: &quot;a sticky food&quot;, &quot;jam&quot;)) (set: $animal to (prompt: &quot;an animal&quot;, &quot;bear&quot;))]\
+[[Go Upstairs-&gt;STEM2ndFLoor]]</tw-passagedata><tw-passagedata pid="14" name="STEM101" tags="" position="1051,315" size="100,100">(if: $numTimesVisitedTom is 0)[(set: $pun to (prompt: &quot;a sticky food&quot;, &quot;jam&quot;)) (set: $animal to (prompt: &quot;an animal&quot;, &quot;bear&quot;))]\
 (set: $numTimesVisitedTom to $numTimesVisitedTom + 1)\
 You are in STEM101. It looks like the great (text-style: &quot;outline&quot;)[Tomithy Orth] is offering his Drop-In Tutoring services!
 &quot;Hi there! Have you found your &lt;font color=&quot;springgreen&quot;&gt;CSC $courseN : Intoduction to $itemC1 : A Top-Down Linear Algebraic Approach (10th edition)&lt;/font&gt; Textbook yet? Seems like you&#39;re in a real (text-style: &quot;expand&quot;)[$animal&#39;s $pun], huh? Get it?&quot;
@@ -383,7 +383,7 @@ He rips the $itemB out of your hands, which is somewhat uncharacteristic of him.
 The STUD! Why didn&#39;t you think to check there?! 
 &quot;Yeah, didn&#39;t you hear?&quot; says Dr. Bloodgood, as he lovingly admires his $itemB. &quot;They even installed that new teleportation chamber that lets you warp from the STEM Building hallway to the Student Center ping pong tables, instantly!&quot;
 And yet they can&#39;t speed up the Forcina Elevator? (set:$stake to 6)
-*You can now visit the STUD!*]\
+*You can now visit the STUD!*(set:$STUD to 5)]\
 (else:)[Dr. Bloodgood seems troubled. &quot;I&#39;m sorry, I can&#39;t talk right now! I&#39;m missing my $itemB. I just can&#39;t seem to remember where I put it... (set: $stake to 1)
 [[Go back downstairs-&gt;Hallway]]
 [[Visit a different professor-&gt;professors]]]\
@@ -418,8 +418,44 @@ She rips the $itemA out of your hands, which is incredibly uncharacteristic of h
 [[Back to the Hallway-&gt;Hallway]] </tw-passagedata><tw-passagedata pid="24" name="biology" tags="" position="1473,186" size="100,100">You see a chemical equation on a whiteboard and run screaming back to the safety of the STEM Building.
 
 
-[[Anything but sig figs!!-&gt;Hallway]]</tw-passagedata><tw-passagedata pid="25" name="Go visit Dr. Papamichail" tags="" position="853,699" size="100,100">You find Dr. Papamichail at the ping pong tables in the STUD. 
-He is playing ping pong</tw-passagedata></tw-storydata>
+[[Anything but sig figs!!-&gt;Hallway]]</tw-passagedata><tw-passagedata pid="25" name="Go visit Dr. Papamichail" tags="" position="853,699" size="100,100"></tw-passagedata><tw-passagedata pid="26" name="WARP" tags="" position="1608,53" size="100,100">(text-style: &quot;rumble&quot;)[YOU TELEPORT AT HYPER SPEED TO THE BROWER STUDENT CENTER!! 
+YOU CAN ALMOST FEEL YOUR TUITION AND TAX DOLLARS SPEEDING PAST YOUR FACE!]
+
+[[Click to Rematerialize]]</tw-passagedata><tw-passagedata pid="27" name="Click to Rematerialize" tags="" position="1800,91" size="100,100">(if: $visitedPapa is 0)[
+You find Dr. Papamichail at the ping pong tables in the STUD. 
+He is playing ping pong... using your &lt;font color=&quot;springgreen&quot;&gt;CSC $courseN : Intoduction to $itemC1 : A Top-Down Linear Algebraic Approach (10th edition)&lt;/font&gt; Textbook as a ping-pong paddle!!
+&quot;Why hello young $name!!&quot; Dr. Papamichail turns to greet you, but continues to swing at the ping pong ball with you inconceivably heavy textbook, volleying it with incredible speed and accuracy, godly even, all things considered.
+[[Say, &quot;Dr. Papamichail! That&#39;s my textbook! I need it for the CSC $courseN midterm exam today!!&quot;-&gt;papa2]]
+[[&quot;WHY ARE YOU DOING THIS&quot;-&gt;papa2]]
+</tw-passagedata><tw-passagedata pid="28" name="papa2" tags="" position="1800,241" size="100,100">&quot;Woah there! I&#39;d much rather use a normal table tennis paddle–&quot; Dr. Papamichail remarks, unconvincingly, as he hurls a table tennis ball directly into the face of a first-year student, who then goes flying through the glass windows of the STUD, presumably to their death.
+&quot;– but this textbook is my favorite color, $color, and the table tennis paddle I brought today is a measly dark $color-ish color!&quot;
+[[&quot;But I need my very textbook, inconceivably heavy textbook for the midterm!!&quot;-&gt;finalChallenge]]</tw-passagedata><tw-passagedata pid="29" name="finalChallenge" tags="" position="2006,331" size="100,100">&quot;Tell you what, I&#39;ll give you your textbook back if you give me the correct output of this C++ code snippet!&quot;
+
+int main() 
+&#39;&#39;{&#39;&#39;
+    int a, b = 10; 
+    a = -b--; 
+    c = a * b;
+	cout &lt;&lt; c;
+    return 0; 
+&#39;&#39;}&#39;&#39; 
+
+[[Give your answer]]</tw-passagedata><tw-passagedata pid="30" name="Give your answer" tags="" position="2045,501" size="100,100">(set: $answer to (prompt: &quot;The answer is...&quot;, &quot;Enter your answer&quot;))\
+
+(if: $answer is &quot;-90&quot;)[&quot;The answer is $answer!&quot; you say!
+&quot;That&#39;s correct!&quot; says Dr. Papamichail!
+
+*Dr. Papamichail hands you back your &lt;font color=&quot;springgreen&quot;&gt;CSC $courseN : Intoduction to $itemC1 : A Top-Down Linear Algebraic Approach (10th edition)&lt;/font&gt; Textbook!!*
+
+### CONGRATULATIONS! You&#39;ve won!
+You&#39;ve Unlocked: (set: $github to &quot;unlocked&quot;)
+(link: &quot;A Link to the GitHub for this project!&quot;)[(goto-url: &#39;https://github.com/s-almeda/ACMTWINE&#39;)]
+[[Go Back to the Beginning-&gt;Our First Twiney Friend]]
+]\
+(else:)[&quot;The answer is $answer!&quot; you say!
+&quot;Oof... Big yikes, you got it wrong, awkward,&quot; Dr. Papamichail says, as he totally would in real life. 
+[[Try again?-&gt;finalChallenge]]
+]</tw-passagedata><tw-passagedata pid="31" name="[&quot;Jump back to the Examples!&quot;" tags="" position="567,163" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
