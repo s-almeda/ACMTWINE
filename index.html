@@ -49,6 +49,16 @@ tw-body { /* Set background to fade lightblue to blue */
 
 }
 
+tw-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
 img { /* Images won't get wider than tw-passage container */
   max-width: 100%;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="923,65" size="100,100">|map&gt;[(display: &quot;Map&quot;)]
@@ -163,9 +173,7 @@ $map
   )
     (set: $positionX to 2)
     (set: $positionY to 2)
-}</tw-passagedata><tw-passagedata pid="4" name="Our First Twiney Friend" tags="" position="567,13" size="100,100">(if: $github is &quot;unlocked&quot;)[&quot;Congrats on beating the game!&quot;
-(link: &quot;A Link to the GitHub for this project!&quot;)[(goto-url: &#39;https://github.com/s-almeda/ACMTWINE&#39;)]]\
-(if: $php is &quot;unlocked&quot;)[[[&quot;Jump back to the Examples!&quot;]]]
+}</tw-passagedata><tw-passagedata pid="4" name="Our First Twiney Friend" tags="" position="567,13" size="100,100">
 ###Hello STEM102!!
 Don&#39;t you think this twine intro could look a little [[cuter?]]
 
@@ -211,7 +219,7 @@ tw-story {
     color: #fff;
 	text-shadow: 0px 0px white; /* text shadow */
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="5" name="You can even use PHP!" tags="" position="490,316" size="100,100">(set: $php to &quot;unlocked&quot;)\
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="5" name="You can even use PHP!" tags="" position="490,316" size="100,100">
 
 Enter your favorite meme:
 
@@ -264,7 +272,8 @@ body { /* Set background to fade lightblue to blue */
 img { /* Images won&#39;t get wider than tw-passage container */
   max-width: 100%;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="7" name="Cool, was that CSS?" tags="" position="681,159" size="100,100">Heck yeah!! and that&#39;s not all Twine can do!!
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="7" name="Cool, was that CSS?" tags="" position="681,159" size="100,100">(set: $ex to &quot;unlocked&quot;)\
+Heck yeah!! and that&#39;s not all Twine can do!!
 Twine publishes directly to HTML, so you can do all kinds of things...
 [[HTML stuff!!-&gt;HTML]]
 [[Javascript stuff!!-&gt;Java]]
@@ -276,7 +285,7 @@ Twine publishes directly to HTML, so you can do all kinds of things...
 (set: $name to (prompt: &quot;Let&#39;s play! Give Me Your Name:&quot;, &quot;Dr. Shmothy G. Y. Almeda &quot;))\
 (set: $courseN to (prompt: &quot;A 3-digit number:&quot;, &quot;420&quot;))\
 (set: $years to (prompt: &quot;A number:&quot;, &quot;7&quot;))\
-(set: $itemD to (prompt: &quot;A color Dr. Papamichail would like&quot;, &quot;Green&quot;))\
+(set: $color to (prompt: &quot;A color Dr. Papamichail would like&quot;, &quot;Green&quot;))\
 (set: $itemA to (prompt: &quot;A snack Dr. Salgian would eat&quot;, &quot;Raisinets&quot;))\
 (set: $itemC1 to (prompt: &quot;A programming language&quot;, &quot;Fortran&quot;))\
 (set: $points to (prompt: &quot;How many meal points you have left&quot;, &quot;400&quot;))\
@@ -413,7 +422,7 @@ She rips the $itemA out of your hands, which is incredibly uncharacteristic of h
 (if: $raisinets is 1)[Want to purchase some $itemA for $points Points?
 [[Yes!-&gt;purchase]]
 [[Nah, I gotta save my points!-&gt;nope]]]\
-(elseif: $raisinets is &gt;= 5)[You&#39;ve already spent ALL OF YOUR POINTS buying $itemB.]\
+(elseif: $raisinets is &gt;= 5)[You&#39;ve already spent ALL OF YOUR POINTS buying $itemA.]\
 (else:)[This place is filled with friendly STEM majors cramming for midterms. A friendly cashier greets you! You&#39;re not very hungry, though, because you already ate some *delicious cheese discs* at the ACM/DIGIT.all meeting!]
 
 [[Go back to the Hallway-&gt;Hallway]]
@@ -428,13 +437,15 @@ She rips the $itemA out of your hands, which is incredibly uncharacteristic of h
 [[Anything but sig figs!!-&gt;Hallway]]</tw-passagedata><tw-passagedata pid="25" name="Go visit Dr. Papamichail" tags="" position="853,699" size="100,100"></tw-passagedata><tw-passagedata pid="26" name="WARP" tags="" position="1608,53" size="100,100">(text-style: &quot;rumble&quot;)[YOU TELEPORT AT HYPER SPEED TO THE BROWER STUDENT CENTER!! 
 YOU CAN ALMOST FEEL YOUR TUITION AND TAX DOLLARS SPEEDING PAST YOUR FACE!]
 
-[[Click to Rematerialize]]</tw-passagedata><tw-passagedata pid="27" name="Click to Rematerialize" tags="" position="1800,91" size="100,100">(if: $visitedPapa is 0)[
+[[Click to Rematerialize]]</tw-passagedata><tw-passagedata pid="27" name="Click to Rematerialize" tags="" position="1800,91" size="100,100">
 You find Dr. Papamichail at the ping pong tables in the STUD. 
 He is playing ping pong... using your &lt;font color=&quot;springgreen&quot;&gt;CSC $courseN : Intoduction to $itemC1 : A Top-Down Linear Algebraic Approach (10th edition)&lt;/font&gt; Textbook as a ping-pong paddle!!
 &quot;Why hello young $name!!&quot; Dr. Papamichail turns to greet you, but continues to swing at the ping pong ball with you inconceivably heavy textbook, volleying it with incredible speed and accuracy, godly even, all things considered.
 [[Say, &quot;Dr. Papamichail! That&#39;s my textbook! I need it for the CSC $courseN midterm exam today!!&quot;-&gt;papa2]]
 [[&quot;WHY ARE YOU DOING THIS&quot;-&gt;papa2]]
 </tw-passagedata><tw-passagedata pid="28" name="papa2" tags="" position="1800,241" size="100,100">&quot;Woah there! I&#39;d much rather use a normal table tennis paddle–&quot; Dr. Papamichail remarks, unconvincingly, as he hurls a table tennis ball directly into the face of a first-year student, who then goes flying through the glass windows of the STUD, presumably to their death.
+
+
 &quot;– but this textbook is my favorite color, $color, and the table tennis paddle I brought today is a measly dark $color-ish color!&quot;
 [[&quot;But I need my very textbook, inconceivably heavy textbook for the midterm!!&quot;-&gt;finalChallenge]]</tw-passagedata><tw-passagedata pid="29" name="finalChallenge" tags="" position="2006,331" size="100,100">&quot;Tell you what, I&#39;ll give you your textbook back if you give me the correct output of this C++ code snippet!&quot;
 
@@ -462,7 +473,14 @@ You&#39;ve Unlocked: (set: $github to &quot;unlocked&quot;)
 (else:)[&quot;The answer is $answer!&quot; you say!
 &quot;Oof... Big yikes, you got it wrong, awkward,&quot; Dr. Papamichail says, as he totally would in real life. 
 [[Try again?-&gt;finalChallenge]]
-]</tw-passagedata><tw-passagedata pid="31" name="[&quot;Jump back to the Examples!&quot;" tags="" position="567,163" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+]</tw-passagedata><tw-passagedata pid="31" name="[&quot;Jump back to the Examples!&quot;" tags="" position="476,147" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="32" name="Header" tags="header" position="256,345" size="100,100">(if: $github is &quot;unlocked&quot;)[&quot;Congrats on beating the game!&quot;
+(link: &quot;A Link to the GitHub for this project!&quot;)[(goto-url: &#39;https://github.com/s-almeda/ACMTWINE&#39;)]]
+</tw-passagedata><tw-passagedata pid="33" name="Footer" tags="footer" position="416,535" size="100,100">&lt;br&gt;
+&lt;br&gt;
+&lt;p style=&quot;font-size:12px; font-family: &quot;Times New Roman&quot;, Times, serif;line-height: 16pt; font-color: white; text-shadow: 0px;&quot;&gt;[[Wanna get started with your own twine adventure?]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="34" name="Wanna get started with your own twine adventure?" tags="" position="416,685" size="100,100">(link: &quot;twinery.org, a good place to get started&quot;)[(goto-url: &#39;https://twinery.org/&#39;)]
+(link: &quot;Online Twine Editor&quot;)[(goto-url: &#39;https://twinery.org/2/&#39;)]
+(link: &quot;Twine Docs&quot;)[(goto-url: &#39;https://twinery.org/wiki/&#39;)]
+(link-undo:&quot;Return&quot;)</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
