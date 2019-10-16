@@ -17,5 +17,12 @@ fclose($fp);
 <h2>Result:</h2>
 
 <?php
-echo file_get_contents( "mydata.txt" ); // get the contents, and echo it out.
+$fn = fopen("mydata.txt","r");
+  
+  while(! feof($fn))  {
+	$result = fgets($fn);
+	echo $result;
+  }
+
+  fclose($fn);
 ?>
