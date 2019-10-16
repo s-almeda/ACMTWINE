@@ -16,7 +16,7 @@
 
 tw-story {	
   /* The following changes the text */
-  color: lightgreen; /* Set text to green or other color */
+  color: lightcyan; /* Set text to green or other color */
   text-shadow: 2px 2px purple; /* text shadow */
   font-size: 20px;
   font-family: "Press Start 2P","Helvetica","Arial",sans-serif;
@@ -163,7 +163,8 @@ $map
   )
     (set: $positionX to 2)
     (set: $positionY to 2)
-}</tw-passagedata><tw-passagedata pid="4" name="Our First Twiney Friend" tags="" position="567,13" size="100,100">(if: $Saves contains &quot;Slot A&quot;)[
+}</tw-passagedata><tw-passagedata pid="4" name="Our First Twiney Friend" tags="" position="567,13" size="100,100">
+(if: $Saves contains &quot;Slot A&quot;)[
   (link: &quot;Start where I left off&quot;)[(load-game:&quot;Slot A&quot;)]
 ]
 
@@ -270,8 +271,24 @@ Twine publishes directly to HTML, so you can do all kinds of things...
 [[PHP stuff!!-&gt;You can even use PHP!]] 
 [[Even Play a Dungeon Crawling Game!-&gt;Start]]
 (save-game:&quot;Slot A&quot;)</tw-passagedata><tw-passagedata pid="8" name="Okay cool, but this game sucks..." tags="" position="932,234" size="100,100">I agree...
-[[###Then let&#39;s play a new one!###-&gt;newGame]]
-</tw-passagedata><tw-passagedata pid="9" name="newGame" tags="" position="1184,35" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="HTML" tags="" position="652,446" size="100,100">&lt;form&gt;
+[[So let&#39;s play a new one!-&gt;newGame]]
+</tw-passagedata><tw-passagedata pid="9" name="newGame" tags="" position="1068,157" size="100,100">\
+(set: $name to (prompt: &quot;Let&#39;s play! Give Me Your Name:&quot;, &quot;Dr. Shmothy G. Y. Almeda &quot;))\
+(set: $courseN to (prompt: &quot;A 3-digit number:&quot;, &quot;420&quot;))\
+(set: $years to (prompt: &quot;A number:&quot;, &quot;7&quot;))\
+(set: $itemD to (prompt: &quot;A color Dr. Papamichail would like&quot;, &quot;Green&quot;))\
+(set: $itemA to (prompt: &quot;A snack Dr. Salgian would eat&quot;, &quot;Raisinets&quot;))\
+(set: $itemC1 to (prompt: &quot;A programming language&quot;, &quot;Fortran&quot;))\
+(set: $itemC2 to (prompt: &quot;A famous computer scientist&quot;, &quot;Ada Lovelace&quot;))\
+(set: $itemB to (prompt: &quot;An object Dr. Bloodgood would have in his office:&quot;, &quot;a confiscated wooden stake&quot;))\
+Your name is $name – a $years th year student here at The College of New Jersey, and you&#39;re &#39;&#39;so&#39;&#39; close to graduating with your degree in **computer science!**
+But (text-style: &quot;rumble&quot;)[oh no]!! your CSC($courseN)midterm starts in an hour and you are NOT prepared. 
+
+You haven&#39;t even (text-style: &quot;shudder&quot;)[touched] your &lt;font color=&quot;springgreen&quot;&gt;CSC $courseN : Intoduction to $itemC1 : A Top-Down Linear Algebraic Approach (10th edition)&lt;/font&gt; Textbook...
+You don&#39;t even know where you put it!!
+
+[[Click here to start looking!-&gt;STEM102]]
+</tw-passagedata><tw-passagedata pid="10" name="HTML" tags="" position="652,446" size="100,100">&lt;form&gt;
   &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot; checked&gt; Male
   &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt; Female
   &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;other&quot;&gt; Nonbinary
@@ -285,10 +302,117 @@ Twine publishes directly to HTML, so you can do all kinds of things...
 What else can I do?
 [[Javascript stuff!!-&gt;Java]]
 [[PHP stuff!!-&gt;You can even use PHP!]] 
-[[Even Play a Dungeon Crawling Game!-&gt;Start]]</tw-passagedata><tw-passagedata pid="11" name="Java" tags="" position="790,309" size="100,100">[[HTML stuff!!-&gt;HTML]]
-[[Javascript stuff!!-&gt;Java]]
+[[Even Play a Dungeon Crawling Game!-&gt;Start]]</tw-passagedata><tw-passagedata pid="11" name="Java" tags="" position="790,309" size="100,100">&lt;style&gt;
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: hotpink;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: aquamarine;
+}
+&lt;/style&gt;
+
+###Javascript!
+&lt;p&gt;&lt;button onclick=&quot;myMove()&quot;&gt;Click Me To Move The Cube!&lt;/button&gt;&lt;/p&gt; 
+
+&lt;div id =&quot;container&quot;&gt;
+  &lt;div id =&quot;animate&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+function myMove() {
+  var elem = document.getElementById(&quot;animate&quot;);   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + &quot;px&quot;; 
+      elem.style.left = pos + &quot;px&quot;; 
+    }
+  }
+}
+&lt;/script&gt;
+	  
+What else can you do?
+[[HTML stuff!!-&gt;HTML]]
 [[PHP stuff!!-&gt;You can even use PHP!]] 
-[[Even Play a Dungeon Crawling Game!-&gt;Start]]</tw-passagedata></tw-storydata>
+[[Even Play a Dungeon Crawling Game!-&gt;Start]]</tw-passagedata><tw-passagedata pid="12" name="STEM102" tags="" position="1279,139" size="100,100">You are in STEM 102. Shm is trying to give a presentation on Twine, but you don&#39;t care... because you still don&#39;t have your 
+&lt;font color=&quot;springgreen&quot;&gt;CSC $courseN : Intoduction to $itemC1 : A Top-Down Linear Algebraic Approach (10th edition)&lt;/font&gt; Textbook !
+
+[[You can leave to go to the STEM Building Hallway-&gt;Hallway]]</tw-passagedata><tw-passagedata pid="13" name="Hallway" tags="" position="1279,289" size="100,100">You are in the STEM Building Hallway. 
+
+(if: $raisinets is 5)[You have some $itemA you purchased at the STEM Cafe.]\
+(if:$stake is 5)[You have Dr. Bloodgood&#39;s $itemB.]\
+(if: $raisinets is 1)[Dr. Salgian seemed pretty hungry...]\
+(if:$stake is 1)[I wonder where Dr. Bloodgood&#39;s $itemB is?]\
+
+[[Go to STEM 102-&gt;STEM102]]
+[[Go to STEM 101-&gt;STEM101]]
+[[Visit the STEM Cafe-&gt;STEMCafe]]
+[[Go Upstairs-&gt;STEM2ndFLoor]]</tw-passagedata><tw-passagedata pid="14" name="STEM101" tags="" position="1128,308" size="100,100">(if: $numTimesVisitedTom is 0)[(set: $pun to (prompt: &quot;a sticky food&quot;, &quot;jam&quot;)) (set: $animal to (prompt: &quot;an animal&quot;, &quot;bear&quot;))]\
+(set: $numTimesVisitedTom to $numTimesVisitedTom + 1)\
+You are in STEM101. It looks like the great (text-style: &quot;outline&quot;)[Tomithy Orth] is offering his Drop-In Tutoring services!
+&quot;Hi there! Have you found your &lt;font color=&quot;springgreen&quot;&gt;CSC $courseN : Intoduction to $itemC1 : A Top-Down Linear Algebraic Approach (10th edition)&lt;/font&gt; Textbook yet? Seems like you&#39;re in a real (text-style: &quot;expand&quot;)[$animal&#39;s $pun], huh? Get it?&quot;
+
+You do not get it.
+(if: $numTimesVisitedTom is &gt; 1)[&quot;It&#39;s funnier after you hear it $numTimesVisitedTom times!&quot;]
+[[Go back to the STEM Building Hallway-&gt;Hallway]]</tw-passagedata><tw-passagedata pid="15" name="STEM2ndFLoor" tags="" position="1413,441" size="100,100">Ann gives you a friendly wave!
+But you just can&#39;t wave back because you don&#39;t have your 
+&lt;font color=&quot;springgreen&quot;&gt;CSC $courseN : Intoduction to $itemC1 : A Top-Down Linear Algebraic Approach (10th edition)&lt;/font&gt; Textbook !
+
+[[Go back downstairs-&gt;Hallway]]
+[[Visit a Professor-&gt;professors]]</tw-passagedata><tw-passagedata pid="16" name="professors" tags="" position="1266,512" size="100,100">Which professor would you like to bother now?
+
+[[Dr. Bloodgood-&gt;Bloodgood]]
+[[Dr. Salgian-&gt;Salgian]]
+[[Dr. Papamichail-&gt;Papa]]
+[[Dr. Li-&gt;Li]]</tw-passagedata><tw-passagedata pid="17" name="Bloodgood" tags="" position="1014,662" size="100,100">(if: $stake is 5)[&quot;Ah, you found my $itemA!&quot; says Dr. Bloogood.
+He rips the $itemA out of your hands, which is somewhat uncharacteristic of him. 
+&quot;By the way&quot; he says, &quot;I think Dr. Papamichail was looking for you in the STUD.&quot; 
+The STUD! Why didn&#39;t you think to check there?! (set:$stake to 6)
+[[Go visit Dr. Papamichail]]]\
+(else:)[Dr. Bloodgood seems troubled. &quot;I&#39;m sorry, I can&#39;t talk right now! I&#39;m missing my $itemB. I just can&#39;t seem to remember where I put it... (set: $stake to 1)
+[[Go back downstairs-&gt;Hallway]]
+[[Visit a different professor-&gt;professors]]]\
+</tw-passagedata><tw-passagedata pid="18" name="Salgian" tags="" position="1164,662" size="100,100">(if: $raisinets is 5)[&quot;Ah, you brought me a snack!&quot; says Dr. Salgian.
+She rips the $itemA out of your hands, which is incredibly uncharacteristic of her. 
+&quot;By the way&quot; she says, between bites of $itemA, &quot;Can you give this back to Dr. Bloodgood?&quot; 
+*She hands you a(n) $itemB !!* (set:$stake to 5)(set:$raisinets to 6)]\
+(elseif: $raisinets is 6)[Dr. Salgian greets you warmly! &quot;Thanks so much for bringing me $itemA! I might even give you extra credit!&quot;]\
+(else:)[Dr. Salgian does not seem to notice you. &quot;Ah... I am so hungry, I cannot continue my office hours until I get some $itemA!&quot; (set: $raisinets to 1)]
+(if:$stake is 1)[You notice what looks like a(n) $itemb behind her desk.]\
+
+[[Go back downstairs-&gt;Hallway]]
+[[Visit a different professor-&gt;professors]]</tw-passagedata><tw-passagedata pid="19" name="Papa" tags="" position="1314,662" size="100,100">You knock on the door, but there&#39;s no answer. Where could he be?
+[[Go back downstairs-&gt;Hallway]]
+[[Visit a different professor-&gt;professors]]</tw-passagedata><tw-passagedata pid="20" name="Li" tags="" position="1464,662" size="100,100">&quot;Take it easy now!&quot; says Dr. Li. &quot;It&#39;s important to take breaks if you&#39;ve been playing this game for too long!&quot;
+&quot;What? What game?&quot;
+&quot;Oh uh... nothing!&quot;
+
+[[Go back downstairs-&gt;Hallway]]
+[[Visit a different professor-&gt;professors]]</tw-passagedata><tw-passagedata pid="21" name="STEMCafe" tags="" position="1611,314" size="100,100">It&#39;s the STEM Cafe!
+(if: $raisinets is 1)[Want to purchase some $itemB for $years.50 Points?
+[[Yes!-&gt;purchase]] | [[Nah, I gotta save my points!-&gt;nope]]]\
+(elseif: $raisinets is &gt;= 5)[You&#39;ve already spent ALL OF YOUR POINTS buying $itemB.]\
+(else:)[This place is filled with friendly STEM majors cramming for midterms. A friendly cashier greets you! You&#39;re not very hungry, though, because you already ate some *delicious cheese discs* at the ACM/DIGIT.all meeting!]
+
+[[Go back to the Hallway-&gt;Hallway]]
+[[Head towards the Science Complex-&gt;biology]]</tw-passagedata><tw-passagedata pid="22" name="purchase" tags="" position="1742,502" size="100,100">Sweet, it&#39;s Meal Equiv time, too!!
+*You have obtained $itemB!!*
+(set: $raisinets to 5)
+[[Go back to the Hallway-&gt;Hallway]]</tw-passagedata><tw-passagedata pid="23" name="nope" tags="" position="1619,506" size="100,100">You quickly leave the STEM cafe to escape the sweet temptation of $itemB. 
+
+[[Back to the Hallway-&gt;Hallway]] </tw-passagedata><tw-passagedata pid="24" name="biology" tags="" position="1473,186" size="100,100">You see a chemical equation on a whiteboard and run screaming back to the safety of the STEM Building.
+
+[[Anything but sig figs!!-&gt;Hallway]]</tw-passagedata><tw-passagedata pid="25" name="Go visit Dr. Papamichail" tags="" position="853,699" size="100,100">You find Dr. Papamichail at the ping pong tables in the STUD. </tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
