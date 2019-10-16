@@ -348,11 +348,14 @@ What else can you do?
 &lt;font color=&quot;springgreen&quot;&gt;CSC $courseN : Intoduction to $itemC1 : A Top-Down Linear Algebraic Approach (10th edition)&lt;/font&gt; Textbook !
 
 [[You can leave to go to the STEM Building Hallway-&gt;Hallway]]</tw-passagedata><tw-passagedata pid="13" name="Hallway" tags="" position="1279,289" size="100,100">You are in the STEM Building Hallway. 
-
-(if: $raisinets is 5)[You have some $itemA you purchased at the STEM Cafe.]\
-(if:$stake is 5)[You have Dr. Bloodgood&#39;s $itemB.]\
-(if: $raisinets is 1)[Dr. Salgian seemed pretty hungry...]\
-(if:$stake is 1)[I wonder where Dr. Bloodgood&#39;s $itemB is?]\
+(if: $raisinets is 5)[You have some $itemA you purchased at the STEM Cafe.
+]\
+(if:$stake is 5)[You have Dr. Bloodgood&#39;s $itemB.
+]\
+(if: $raisinets is 1)[Dr. Salgian seemed pretty hungry...
+]\
+(if:$stake is 1)[I wonder where Dr. Bloodgood&#39;s $itemB is?
+]\
 
 [[Go to STEM 102-&gt;STEM102]]
 [[Go to STEM 101-&gt;STEM101]]
@@ -374,8 +377,8 @@ But you just can&#39;t wave back because you don&#39;t have your
 [[Dr. Bloodgood-&gt;Bloodgood]]
 [[Dr. Salgian-&gt;Salgian]]
 [[Dr. Papamichail-&gt;Papa]]
-[[Dr. Li-&gt;Li]]</tw-passagedata><tw-passagedata pid="17" name="Bloodgood" tags="" position="1014,662" size="100,100">(if: $stake is 5)[&quot;Ah, you found my $itemA!&quot; says Dr. Bloogood.
-He rips the $itemA out of your hands, which is somewhat uncharacteristic of him. 
+[[Dr. Li-&gt;Li]]</tw-passagedata><tw-passagedata pid="17" name="Bloodgood" tags="" position="1014,662" size="100,100">(if: $stake is 5)[&quot;Ah, you found my $itemB!&quot; says Dr. Bloogood.
+He rips the $itemB out of your hands, which is somewhat uncharacteristic of him. 
 &quot;By the way&quot; he says, &quot;I think Dr. Papamichail was looking for you in the STUD.&quot; 
 The STUD! Why didn&#39;t you think to check there?! (set:$stake to 6)
 [[Go visit Dr. Papamichail]]]\
@@ -388,7 +391,7 @@ She rips the $itemA out of your hands, which is incredibly uncharacteristic of h
 *She hands you a(n) $itemB !!* (set:$stake to 5)(set:$raisinets to 6)]\
 (elseif: $raisinets is 6)[Dr. Salgian greets you warmly! &quot;Thanks so much for bringing me $itemA! I might even give you extra credit!&quot;]\
 (else:)[Dr. Salgian does not seem to notice you. &quot;Ah... I am so hungry, I cannot continue my office hours until I get some $itemA!&quot; (set: $raisinets to 1)]
-(if:$stake is 1)[You notice what looks like a(n) $itemb behind her desk.]\
+(if:$stake is 1)[You notice what looks like a(n) $itemB behind her desk.]\
 
 [[Go back downstairs-&gt;Hallway]]
 [[Visit a different professor-&gt;professors]]</tw-passagedata><tw-passagedata pid="19" name="Papa" tags="" position="1314,662" size="100,100">You knock on the door, but there&#39;s no answer. Where could he be?
@@ -399,7 +402,7 @@ She rips the $itemA out of your hands, which is incredibly uncharacteristic of h
 
 [[Go back downstairs-&gt;Hallway]]
 [[Visit a different professor-&gt;professors]]</tw-passagedata><tw-passagedata pid="21" name="STEMCafe" tags="" position="1611,314" size="100,100">It&#39;s the STEM Cafe!
-(if: $raisinets is 1)[Want to purchase some $itemB for $years.50 Points?
+(if: $raisinets is 1)[Want to purchase some $itemA for $years.50 Points?
 [[Yes!-&gt;purchase]] | [[Nah, I gotta save my points!-&gt;nope]]]\
 (elseif: $raisinets is &gt;= 5)[You&#39;ve already spent ALL OF YOUR POINTS buying $itemB.]\
 (else:)[This place is filled with friendly STEM majors cramming for midterms. A friendly cashier greets you! You&#39;re not very hungry, though, because you already ate some *delicious cheese discs* at the ACM/DIGIT.all meeting!]
