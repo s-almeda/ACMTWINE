@@ -6,8 +6,7 @@ $content = file($filename);
 
 $data = $_POST['field1'] . "\n" . "\r\n";
 
-//insert votes to txt file
-$insertvote = $yes."||".$no;
+//insert to txt file
 $fp = fopen($filename,"a+");
 fputs($fp,$data);
 fclose($fp);
